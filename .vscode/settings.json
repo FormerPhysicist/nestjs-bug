@@ -1,0 +1,18 @@
+{
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "eslint.options": {
+    "experimentalDecorators": true
+  },
+  "eslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

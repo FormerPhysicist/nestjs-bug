@@ -1,0 +1,50 @@
+# ignore emacs backup files
+*~
+\#*
+
+# ignore build products.
+target/
+output/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Dd]ist/
+
+# ignore user specific files for intellij.
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/dictionaries/
+**/.idea/vcs.xml
+**/.idea/modules.xml
+**/.idea/usage.statistics.xml
+
+# ignore webstorm-intellij files
+*.js.map
+.DS_Store
+
+# ignore artifacts
+*.zip
+
+# ignore any locally stored (token-manager) credentials
+.tokenmanager.json
+
+# ignore the temporary output produced by nyc and istanbul
+.nyc_output/
+
+# ignore anything in the node_modules folder
+**/node_modules/
+
+# ignore any environment files used with this project.
+*.env
+
+# ignore all gulpfile related files except for the main typescript files
+gulpfile.*
+!gulpfile.ts
+
+# ignore the lock file
+package-lock.json

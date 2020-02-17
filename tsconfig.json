@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": false,
+    "noEmitOnError": true,
+    "strict": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2018",
+    "sourceMap": true,
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./src"
+    },
+    {
+      "path": "./test"
+    }
+  ]
+}

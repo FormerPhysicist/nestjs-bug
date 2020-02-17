@@ -1,0 +1,198 @@
+{
+    "env": {
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.eslint.json",
+        "tsconfigRootDir": "./",
+        "sourceType": "module",
+        "ecmaVersion": 2018,
+        "ecmaFeatures": {
+            "impliedStrict": true
+        }
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".mjs",
+                    ".ts",
+                    ".tsx",
+                    ".d.ts"
+                ]
+            }
+        }
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:node/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:jsdoc/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "node",
+        "spellcheck",
+        "jsdoc"
+    ],
+    "rules": {
+        "no-var": 1,
+        "prefer-const": 1,
+        "prefer-arrow-callback": 1,
+        "prettier/prettier": [
+            "error"
+        ],
+        "import/extensions": [
+            "error",
+            "never",
+            {
+                "json": "allow"
+            }
+        ],
+        "class-methods-use-this": "off",
+        "node/no-missing-import": "off",
+        "node/no-unpublished-require": "off",
+        "node/no-unsupported-features/es-syntax": [
+            "error",
+            {
+                "version": ">=11.0.0",
+                "ignores": [
+                    "modules"
+                ]
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "ignoreComments": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreStrings": true
+            }
+        ],
+        "jsdoc/no-types": 1,
+        "jsdoc/require-param-type": 0,
+        "jsdoc/require-returns-type": 0,
+        "require-jsdoc": [
+            "off"
+        ],
+        "node/exports-style": [
+            "error",
+            "module.exports"
+        ],
+        "@typescript-eslint/no-non-null-assertion": [
+            "warn"
+        ],
+        "spellcheck/spell-checker": [
+            "warn",
+            {
+                "comments": true,
+                "strings": false,
+                "identifiers": false,
+                "lang": "en_US",
+                "skipWords": [
+                    "param",
+                    "memberof",
+                    "eslint",
+                    "chai",
+                    "Oauth",
+                    "whitelist",
+                    "camelcase",
+                    "async",
+                    "gulpfile",
+                    "npx",
+                    "tsc",
+                    "stdout",
+                    "stderr",
+                    "npm",
+                    "src",
+                    "intellisense",
+                    "cwd",
+                    "cmd",
+                    "quicktype",
+                    "dev",
+                    "prod",
+                    "uat",
+                    "usr",
+                    "jsdoc",
+                    "tokenmanager",
+                    "microservice",
+                    "validator",
+                    "metadata"
+                ],
+                "skipWordIfMatch": [
+                    "[Aa]pigee",
+                    "[Dd]eserializ[e|ing]",
+                    "[Ss]inon",
+                    "[Pp]romisif[y|ied]",
+                    "[VSC|vsc]ode",
+                    "[Pp]aralleliz[e|ed|ation]",
+                    "[Uu]ndeploy[ing|ment|ed]?",
+                    "y?args",
+                    "subtasks?",
+                    "sharedflows?",
+                    "apis?",
+                    "middlewares?",
+                    "[Ff]astify",
+                    "nestjs"
+                ],
+                "skipIfMatch": [
+                    "http://[^s]*",
+                    "https://[^s]*"
+                ]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "*-[Tt]est.ts"
+            ],
+            "env": {
+                "node": true,
+                "mocha": true
+            },
+            "rules": {
+                "no-console": 0,
+                "@typescript-eslint/no-explicit-any": 0,
+                "require-jsdoc": "off",
+                "prefer-arrow-callback": "off"
+            }
+        },
+        {
+            "files": [
+                "index.[tj]s",
+                "index.d.[tj]s"
+            ],
+            "rules": {
+                "import/prefer-default-export": [
+                    "off"
+                ]
+            }
+        },
+        {
+            "files": [
+                "gulpfile.[tj]s"
+            ],
+            "rules": {
+                "import/prefer-default-export": [
+                    "off"
+                ],
+                "no-console": 0,
+                "@typescript-eslint/no-explicit-any": 0,
+                "require-jsdoc": "off"
+            }
+        }
+    ]
+}

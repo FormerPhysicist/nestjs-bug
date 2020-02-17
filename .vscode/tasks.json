@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean-dist",
+            "type": "shell",
+            "command": "rm -fr ./dist",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "compile-src",
+            "type": "shell",
+            "command": "npx tsc -b src",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "build",
+            "dependsOn": ["clean-dist", "compile-src"],
+            "dependsOrder": "sequence"
+        }
+    ]
+}
